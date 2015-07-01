@@ -1,7 +1,6 @@
 [user]
 	email = xuywang@cisco.com
 	name = Xuyang Wang
-	signingkey = A7B6C711
 [push]
 	default = simple
 [alias]
