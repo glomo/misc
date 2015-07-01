@@ -1,0 +1,11 @@
+#cisco github account
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+
+#github glomo account
+Host github.com-glomo
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_glomo
