@@ -1,0 +1,32 @@
+[user]
+	email = xuywang@cisco.com
+	name = Xuyang Wang
+	signingkey = A7B6C711
+[push]
+	default = simple
+[alias]
+	show-graph = log --graph --abbrev-commit --pretty=oneline
+	;short log
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	;short log with numstat
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	;short log with date
+	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+	;short log with relative date
+	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	;log on a specific file
+	filelog = log -u
+	fl = log -u
+	;numstate on the last commit
+	dl = "!git ll -1"
+	;diff for the last commit
+	dlc = diff --cached HEAD^
+	;numstat on a specific commit
+	lc  = "!f() { git ll "$1"^.."$1"; }; f"
+	;diff for a specific commit
+	dr  = "!f() { git diff "$1"^.."$1"; }; f"
+	diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
