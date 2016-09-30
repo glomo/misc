@@ -368,6 +368,9 @@ zstyle ':completion:*:cd:*' ignore-parents parent pwd
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
+#menu select
+zstyle ':completion:*' menu select
+
 # Quick ../../.. from https://github.com/blueyed/oh-my-zsh
 resolve-alias() {
     # Recursively resolve aliases and echo the command.
@@ -433,6 +436,9 @@ bindkey '^Xf' insert-files
 #autoload -U tetris
 #zle -N tetris
 #bindkey '^X^T' tetris
+
+# incremental search
+bindkey '^R' history-incremental-search-backward
 
 # xargs but zargs
 autoload -U zargs
